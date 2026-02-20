@@ -1,0 +1,11 @@
+interface:
+  display_name: "Black SEO Analyzer"
+  short_description: "Run BSEOA crawls, interpret SEO results, and generate reports"
+  brand_color: "#1a1a2e"
+  default_prompt: "$bseoa"
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools: []
