@@ -1,92 +1,11 @@
-# Black SEO Analyzer — OpenAI Skill
+# Moved
 
-An OpenAI Codex skill (`$bseoa`) for working with [Black SEO Analyzer](https://github.com/sethblack/black-seo-analyzer), a Rust-based CLI tool for comprehensive technical SEO analysis.
+This repository is archived. The bseoa skill now ships with every release as a single
+ZIP that works in Claude Code, Codex, Claude.ai, ChatGPT, Perplexity and Grok:
 
-## What This Skill Does
+https://www.blackseoanalyzer.com/en/llm-skills
 
-When you type `$bseoa` in Codex, Codex becomes an expert assistant for BSEOA. It will:
+Source lives in the main repository under `integrations/skill/`.
 
-- Build correct commands for your specific analysis goal
-- Run BSEOA and capture results
-- Interpret crawl data and explain what issues mean
-- Prioritize findings by SEO impact
-- Suggest command flags for follow-up analysis
-
-## Installation
-
-### Windows
-
-```bat
-install.bat
-```
-
-Or manually copy the `bseoa` directory to:
-```
-%USERPROFILE%\.agents\skills\bseoa\
-```
-
-### macOS / Linux
-
-```bash
-chmod +x install.sh && ./install.sh
-```
-
-Or manually:
-```bash
-cp -r bseoa ~/.agents/skills/bseoa
-```
-
-After installing, restart Codex (or open a new session) for the skill to appear.
-
-## Usage
-
-In any Codex session, invoke explicitly with:
-
-```
-$bseoa
-```
-
-Or let Codex pick it up implicitly when your prompt involves SEO audits, crawling, or BSEOA analysis.
-
-Examples:
-
-```
-$bseoa
-Analyze https://example.com and give me a full SEO audit as JSON.
-```
-
-```
-$bseoa
-I want to find all broken links on my site at https://mysite.com
-```
-
-```
-$bseoa
-Run a quick audit on https://example.com using OpenAI for content suggestions
-```
-
-```
-$bseoa
-Re-generate a CSV report from the last crawl without re-crawling
-```
-
-## Skill Location
-
-Codex reads skills from `~/.agents/skills/` (user scope) and `.agents/skills/` relative to your repository or working directory (repo scope). This skill installs to the user scope so it is available in any project.
-
-## Requirements
-
-- [Black SEO Analyzer](https://github.com/sethblack/black-seo-analyzer) installed and on your PATH
-- Codex CLI, IDE extension, or Codex app
-- (Optional) A BSEOA license key for unlimited page analysis
-- (Optional) API keys for AI-powered analysis (OpenAI, Anthropic, DeepSeek, or Gemini)
-
-## Skill File
-
-The skill logic lives in `bseoa/SKILL.md`. Reference files are in `bseoa/reference/` and `bseoa/license.md`. The optional `bseoa/agents/openai.yaml` configures Codex app metadata and invocation policy. Edit these to customize behavior, add site-specific defaults, or tune guidance for your workflow.
-
-## Related
-
-- [Black SEO Analyzer docs](https://github.com/sethblack/black-seo-analyzer)
-- [OpenAI Codex skills documentation](https://github.com/openai/skills)
-- [Agent Skills Specification](https://github.com/openai/agent-skills-spec)
+The version pinned here (26.2.18) is out of date and its macOS download path no longer
+resolves. Please do not install from this repository.
